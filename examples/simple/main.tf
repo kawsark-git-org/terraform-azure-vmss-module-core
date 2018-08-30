@@ -17,7 +17,7 @@ provider "azurerm" {}
 
 #Instantiate core module:
 module "core" {
-  source = "github.com/kawsark-git-org/terraform-azure-vmss-packer/modules/core"
+  source = "app.terraform.io/kawsark-git-org/terraform-azure-vmss-module-core"
   location = "${var.location}"
   core_resource_group_name = "${var.core_resource_group_name}"
   tags = {
