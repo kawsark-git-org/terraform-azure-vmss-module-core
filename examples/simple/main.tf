@@ -17,7 +17,8 @@ provider "azurerm" {}
 
 #Instantiate core module:
 module "core" {
-  source = "app.terraform.io/kawsark-git-org/terraform-azure-vmss-module-core"
+  source = "app.terraform.io/CI-demo-org/terraform-azure-vmss-module-core"
+  version = "1.2"
   location = "${var.location}"
   core_resource_group_name = "${var.core_resource_group_name}"
   tags = {
@@ -39,4 +40,3 @@ output "jumpbox_public_ip" {
 output "app_subnet_id" {
     value = "${module.core.app_subnet_id}"
 }
-
