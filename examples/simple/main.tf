@@ -17,7 +17,7 @@ provider "azurerm" {}
 
 #Instantiate core module:
 module "core" {
-  source = "app.terraform.io/CI-demo-org/terraform-azure-vmss-module-core"
+  source  = "app.terraform.io/CI-demo-org/vmss-module-app/core"
   version = "1.2"
   location = "${var.location}"
   core_resource_group_name = "${var.core_resource_group_name}"
